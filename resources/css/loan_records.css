@@ -1,0 +1,182 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #009879;
+    color: white;
+    text-align: left;
+}
+tr {
+    transition: background .3s ease;
+}
+tr:hover {
+    background-color: #f3f3f3;
+}
+
+.add-record {
+    padding: 10px 20px;
+    background-color: white;
+    color: #009879;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.add-record:hover {
+    background-color: #f3f3f3;
+}
+@media screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr { margin: 0 0 1rem 0; }
+    td {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 50%;
+    }
+    td:before {
+        position: absolute;
+        top: 0;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+    td:nth-of-type(1):before { content: "Sr #"; }
+    td:nth-of-type(2):before { content: "Lender"; }
+    td:nth-of-type(3):before { content: "Borrower"; }
+    td:nth-of-type(4):before { content: "Amount"; }
+    td:nth-of-type(5):before { content: "Image Link"; }
+    td:nth-of-type(6):before { content: "Date"; }
+    td:nth-of-type(7):before { content: "Actions"; }
+}
+
+.delete-button{
+    color: rgba(206, 44, 44, 0.712);
+    cursor: pointer;
+}
+
+.delete-button:hover{
+    color: rgb(206, 44, 44);
+    cursor: pointer;
+}
+
+.edit-button a{
+    text-decoration: none;
+    color: rgba(27, 145, 224, 0.658);
+}
+.edit-button a:hover{
+    text-decoration: none;
+    color: rgb(14, 129, 206);
+}
+
+/* ******************************************************************************************* */
+
+.modal-target {
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .modal-target:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    opacity: 1 !important;
+    max-width: 1080px;
+  }
+  
+  /* Caption of Modal Image */
+  .modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    margin-top: 32px;
+  }
+  
+  /* Add Animation */
+  .modal-content, .modal-caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-atransform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .modal-close:hover,
+  .modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 3em auto;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: -webkit-fill-available
+}
+
+.row>* {
+    flex-grow: 1;
+    /* margin: 0 1em; */
+}
+
+.input-group {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input-group-text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+th,
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #009879;
+    color: white;
+    text-align: left;
+}
+
+tr {
+    transition: background .3s ease;
+}
+
+tr:hover {
+    background-color: #f3f3f3;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* form label, form input[type="text"] {
+    width: calc(70% - 22px);
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+} */
+form input[type="submit"] {
+    width: calc(25% - 22px);
+    margin-left: 1em;
+    padding: 10px;
+    border: none;
+    color: white;
+    background: #009879;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background: #007b63;
+}
+
+@media screen and (max-width: 600px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin: 0 0 1rem 0;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        position: absolute;
+        top: 0;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    td:nth-of-type(1):before {
+        content: "Sr #";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Lender Name";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Actions";
+    }
+
+    form label,
+    form input[type="text"],
+    form input[type="submit"] {
+        width: 100%;
+    }
+}
+
+.delete-button{
+    color: rgba(206, 44, 44, 0.712);
+    cursor: pointer;
+}
+
+.delete-button:hover{
+    color: rgb(206, 44, 44);
+    cursor: pointer;
+}
+.edit-button{
+    text-decoration: none;
+    color: rgba(27, 145, 224, 0.658);
+}
+.edit-button:hover{
+    cursor: pointer;
+    color: rgb(14, 129, 206);
+}
+
+#form_container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 1em;
+    width: -webkit-fill-available;
+}
+
+#my_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.m-1{
+    margin: 1em;
+}
